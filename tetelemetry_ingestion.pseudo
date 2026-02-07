@@ -1,0 +1,21 @@
+# Telemetry Ingestion & Normalisation
+# ----------------------------------
+# Purpose:
+# Ingest cloud security events, normalise schemas,
+# enrich with contextual metadata, and publish to
+# a real-time processing stream for AI analysis.
+
+FOR each cloud_event RECEIVED:
+
+    # Step 1: Normalise
+    normalise cloud_event schema to common format
+
+    # Step 2: Contextual Enrichment
+    enrich cloud_event with:
+        - user_identity
+        - resource_type
+        - geo_location
+        - asset_criticality
+
+    # Step 3: Streaming
+    push enriched cloud_event to real_time_event_stream
