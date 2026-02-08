@@ -1,17 +1,17 @@
 # Behavioural Baselining & Anomaly Detection
-# ------------------------------------------
+ ------------------------------------------
 # Purpose:
-# Establish normal behaviour profiles for users,
-# services, and workloads, and detect deviations
-# indicative of potential security threats.
+- Establish normal behaviour profiles for users,
+- services, and workloads, and detect deviations
+- indicative of potential security threats.
 
-# Baseline Construction Phase
-FOR each entity (user, service, workload):
+- Baseline Construction Phase
+  FOR each entity (user, service, workload):
     collect historical security events
-    derive normal behaviour profile
+    derive a normal behaviour profile
     store baseline model
 
-# Real-Time Detection Phase
+ -Real-Time Detection Phase
 FOR each new security_event:
     entity = extract entity from event
     baseline = retrieve baseline model for entity
