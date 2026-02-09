@@ -1,0 +1,15 @@
+# Feedback Loop & Continuous Learning
+# ----------------------------------
+# Purpose:
+# Improve detection accuracy over time by incorporating
+# analyst decisions and incident outcomes into model tuning.
+
+# Incident Resolution Feedback
+FOR each resolved incident:
+    capture analyst decision
+    label detection outcome
+
+# Model Improvement Cycle
+SCHEDULE periodic retraining:
+    update behaviour models
+    deploy tuned thresholds
