@@ -1,0 +1,16 @@
+# Event Sequence & Attack-Chain Analysis
+ -------------------------------------
+## Purpose:
+- Detect multi-stage attack behaviour by correlating
+- security events over time for a given entity.
+
+## Sequence Construction Phase
+GROUP security_events BY entity WITHIN time_window
+
+## Sequence Analysis Phase
+FOR each event_sequence:
+    analyse event order and timing
+
+    IF sequence matches known attack pattern:
+        generate correlated security alert
+        Attach supporting events for investigation
