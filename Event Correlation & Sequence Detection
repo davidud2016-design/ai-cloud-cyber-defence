@@ -1,0 +1,14 @@
+# Event Correlation & Sequence Detection
+# -------------------------------------
+# Purpose:
+# Correlate security events over time to identify
+# multi-step attack behaviour that is not visible
+# from individual events alone.
+
+# Step 1: Build Event Sequences
+GROUP events BY entity WITHIN time_window
+
+# Step 2: Analyse Sequences
+FOR each event_sequence:
+    IF sequence matches known attack pattern:
+        generate correlated security alert
