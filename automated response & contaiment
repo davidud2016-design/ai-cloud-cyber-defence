@@ -1,0 +1,17 @@
+# Automated Response & Containment
+# --------------------------------
+# Purpose:
+# Execute proportionate security responses based on
+# threat severity, balancing automation with control.
+
+# High Severity Response
+IF threat_severity == HIGH:
+    disable affected identity
+    revoke active authentication sessions
+    isolate affected resource
+    notify security team
+
+# Medium Severity Response
+ELSE IF threat_severity == MEDIUM:
+    require step-up authentication
+    increase monitoring and logging
